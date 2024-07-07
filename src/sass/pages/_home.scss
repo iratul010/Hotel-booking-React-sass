@@ -1,0 +1,10 @@
+.content{
+  display: flex;
+  height: calc(100vh - 7rem);
+}
+.hotel-view{
+  background-color: $color-white;
+  flex: 1;
+  background-color: red;
+   height: 100%;
+}
