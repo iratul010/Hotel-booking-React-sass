@@ -1,10 +1,102 @@
-.content{
+.content {
   display: flex;
   height: calc(100vh - 7rem);
 }
-.hotel-view{
-  background-color: $color-white;
+.hotel-view {
   flex: 1;
-  background-color: red;
-   height: 100%;
+  height: 100%;
+  background-color: $color-white;
+}
+.gallery {
+  display: flex;
+  &__item {
+  }
+  &__photo {
+    display: block;
+    width: 100%;
+  }
+}
+.overview {
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid $color-grey-light-2;
+  &__heading {
+    font-size: 2.25rem;
+    font-weight: 300;
+    letter-spacing: 1px;
+    padding: 1.5rem 3rem;
+    text-transform: uppercase;
+  }
+  &__stars {
+    margin-right: auto;
+    display: flex;
+  }
+  &__icon-star,
+  &__icon-location {
+    width: 1.75rem;
+    height: 1.75rem;
+    fill: $color-primary;
+  }
+  &__location {
+    font-size: 1.2rem;
+    display: flex;
+    align-items: center;
+  }
+  &__icon-location {
+    margin-right: 0.5rem;
+  }
+  &__rating {
+    color: $color-white;
+    background-color: $color-primary;
+    margin-left: 3rem;
+    align-self: stretch;
+    padding: 0 2.25rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    &-average {
+      font-size: 2.25rem;
+      font-weight: 300;
+      margin-bottom: -3px;
+    }
+    &-count {
+      font-size: 0.8rem;
+      text-transform: uppercase;
+    }
+  }
+}
+.btn-inline {
+  font-size: inherit;
+  text-decoration: none;
+  border: none;
+  cursor: pointer;
+  color: $color-primary;
+  border-bottom: 1px solid currentColor;
+  display: inline-block;
+  background-color: transparent;
+  padding-bottom: 2px;
+  transition: all 0.2s;
+  &:hover {
+    color: $color-grey-dark-1;
+  }
+  &:focus {
+    outline: none;
+    animation: pultate 1s infinite;
+  }
+}
+
+@keyframes pultate {
+  0% {
+    transform: scale(1);
+    box-shadow: none;
+  }
+  50% {
+    transform: scale(1.05);
+    box-shadow: 0 1rem 4rem rgba(0, 0, 0, 0.2);
+  }
+  100% {
+    transform: scale(1);
+    box-shadow: none;
+  }
 }
